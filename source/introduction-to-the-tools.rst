@@ -65,9 +65,17 @@ deployment, and also for initializing a custom add-on product.
 HAProxy
 -------
 
-TODO
+HAProxy is a load balancer daemon. In a multi-instance Zope/Plone deployment,
+HAProxy is used to balance the load between the instance clusters.
+
+* http://haproxy.1wt.eu/
 
 Varnish
 -------
 
-TODO
+Zope ZServers have limited threads to handle requests, which could cause
+blocking issue on a site with many users. Varnish is used to cache static
+resources so that Zope does not have to recalculate the pages to serve them, 
+radically improving performance of a site.
+
+* https://www.varnish-cache.org/
